@@ -1,0 +1,11 @@
+dados_paises <- data.frame(
+  Pais = c("Brasil", "Estados Unidos", "França", "Alemanha", "Japão"),
+  Indice_Populismo = c(0.6, 0.4, 0.8, 0.5, 0.3),
+  stringsAsFactors = FALSE
+)
+
+
+dados_paises$Indice_Populismo <- discretize(dados_paises$Indice_Populismo, method = "interval", breaks = 3, labels = c("não_populista","pouco_populista", 'populista'))
+
+
+View(dados_paises)
